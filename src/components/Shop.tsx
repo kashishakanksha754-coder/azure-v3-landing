@@ -40,7 +40,7 @@ function ShineOverlay({ src }: { src: string }) {
 
 function ShopBanner() {
   return (
-    <section id="shop" data-section="shop" className="section" style={{ background: "#fff" }}>
+    <section id="shop" data-section="shop" className="section" style={{ background: "#fff", paddingBottom: 0 }}>
       <div className="container">
         <div style={{ borderRadius: "var(--radius-img)", overflow: "hidden" }}>
           <ImagePanel
