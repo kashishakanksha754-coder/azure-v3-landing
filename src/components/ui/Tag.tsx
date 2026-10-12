@@ -9,6 +9,7 @@ interface TagProps {
   children: React.ReactNode;
   style?: React.CSSProperties;
   className?: string;
+  icon?: React.ReactNode;
 }
 
 export default function Tag({
@@ -17,6 +18,7 @@ export default function Tag({
   children,
   style,
   className = "",
+  icon,
 }: TagProps) {
   const cls = [
     "tag",
@@ -31,7 +33,8 @@ export default function Tag({
     .join(" ");
 
   return (
-    <span className={cls} style={style}>
+    <span className={cls} style={{ gap: icon ? 7 : undefined, ...style }}>
+      {icon && <span style={{ display: "inline-flex", alignItems: "center", flexShrink: 0 }}>{icon}</span>}
       <span>{children}</span>
     </span>
   );

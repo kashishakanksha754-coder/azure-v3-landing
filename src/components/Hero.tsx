@@ -6,6 +6,12 @@ import Tag from "@/components/ui/Tag";
 import ImagePanel from "@/components/ui/ImagePanel";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
+
+const APPLE_ICON = (
+  <svg width="13" height="16" viewBox="0 0 814 1000" fill="currentColor" aria-hidden>
+    <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 71 0 130.5 46.4 174.9 46.4 42.7 0 109.2-49 192.5-49 30.9 0 108.2 2.6 168.7 75.3zM529.5 97.5c32.7-37.7 55.6-90.6 55.6-143.5 0-7.7-.6-15.5-1.9-22.5-52.9 2-115.4 35.3-153.2 78.4-28.3 32.1-56.3 85.1-56.3 139 0 8.3 1.3 16.6 1.9 19.2 3.2.6 8.4 1.3 13.6 1.3 47.5 0 105.8-31.5 140.3-71.9z"/>
+  </svg>
+);
 const INTERVAL = 6500;
 
 type SlideData = {
@@ -189,7 +195,7 @@ function Slide({
         >
           <div style={{ maxWidth: 640 }}>
             <div style={{ marginBottom: 24 }}>
-              <Tag variant="on-dark">{data.eyebrow}</Tag>
+              <Tag variant="on-dark" icon={data.eyebrow === "Apple Business Partner" ? APPLE_ICON : undefined}>{data.eyebrow}</Tag>
             </div>
             <Heading
               style={{
