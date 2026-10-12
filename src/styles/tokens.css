@@ -1,0 +1,144 @@
+/* ── Azure brand palette — image-led v2 (pink-only) ─────────────────────── */
+:root {
+  /* ── Pink scale (logo pink) ── */
+  --pink-50:  #FDF4F8;
+  --pink-100: #F9E6EF;
+  --pink-200: #F1CADB;
+  --pink-300: #E4A3BF;
+  --pink-400: #CB7599;
+  --pink-500: #A85A7B; /* logo pink */
+  --pink-600: #8F4568;
+  --pink-700: #743553;
+  --pink-800: #572740;
+  --pink-900: #3B1A2B;
+  --pink-950: #26101C; /* deep plum: dark panels, footer, scrims */
+
+  /* ── Neutrals ── */
+  --white:        #FFFFFF;
+  --ink:          #1B1519;
+  --text-muted:   #6A5A63;
+  --text-faint:   #9A8A93;
+  --line:         #F0DCE6;
+  --surface-warm: var(--pink-50);
+
+  /* ── Brand gradients ── */
+  --grad-brand:   linear-gradient(135deg, #26101C 0%, #743553 50%, #CB7599 100%);
+  --scrim-left:   linear-gradient(90deg, rgba(38,16,28,.88) 0%, rgba(38,16,28,.55) 42%, rgba(38,16,28,0) 78%);
+  --scrim-bottom: linear-gradient(0deg, rgba(38,16,28,.94) 0%, rgba(38,16,28,.86) 38%, rgba(38,16,28,.6) 62%, rgba(38,16,28,.22) 82%, rgba(38,16,28,0) 100%), linear-gradient(rgba(38,16,28,.18), rgba(38,16,28,.18));
+  --brand-wash:   linear-gradient(135deg, rgba(203,117,153,.35) 0%, rgba(38,16,28,0) 60%);
+
+  /* ── Backward-compat aliases (keep until nothing references them) ── */
+  --charcoal-950: var(--pink-950);
+  --charcoal-900: var(--pink-900);
+  --charcoal-800: var(--pink-800);
+  --charcoal-700: var(--pink-700);
+  --charcoal-500: var(--pink-500);
+  --charcoal-300: var(--pink-300);
+  --charcoal-100: var(--pink-100);
+
+  --mauve-700: var(--pink-700);
+  --mauve-600: var(--pink-600);
+  --mauve-500: var(--pink-500);
+  --mauve-300: var(--pink-300);
+  --mauve-100: var(--pink-100);
+  --mauve-50:  var(--pink-50);
+
+  --navy-950: var(--pink-950);
+  --navy-900: var(--pink-900);
+  --navy-900-rgb: 59, 26, 43;
+  --navy-800: var(--pink-800);
+  --navy-700: var(--pink-700);
+  --charcoal: var(--pink-900);
+
+  --magenta-700: var(--pink-700);
+  --magenta-600: var(--pink-600);
+  --magenta-500: var(--pink-500);
+  --brand-pink:  var(--pink-500);
+  --magenta-100: var(--pink-100);
+  --magenta-50:  var(--pink-50);
+
+  --blue-600:    var(--pink-600);
+  --blue-bright: var(--pink-500);
+  --blue-deep:   var(--pink-700);
+  --blue-500:    var(--pink-300);
+  --blue-300:    var(--pink-300);
+  --blue-50:     var(--pink-50);
+
+  --gold-500: var(--pink-300);
+  --gold-300: var(--pink-100);
+
+  /* ── Semantic ── */
+  --text:          var(--ink);
+  --bg:            var(--white);
+  --surface:       var(--pink-50);
+  --surface-hover: var(--pink-100);
+  --surface-blue:  var(--pink-50);
+  --surface-pink:  var(--pink-50);
+  --tile:          var(--pink-100);
+  --navy-tint:     var(--pink-100);
+  --card:          var(--surface);
+  --card-hover:    var(--surface-hover);
+  --tag-bg:        var(--white);
+  --section-bg:    var(--white);
+  --pill-border:   var(--pink-300);
+  --on-dark:       #FFFFFF;
+  --on-dark-muted: rgba(255,255,255,.68);
+  --dark:          var(--pink-900);
+  --dark-2:        var(--pink-800);
+
+  --wash-blue: linear-gradient(180deg, var(--pink-50) 0%, #FFFFFF 100%);
+  --wash-pink: linear-gradient(180deg, var(--pink-100) 0%, #FFFFFF 100%);
+
+  --grad-magenta: var(--grad-brand);
+  --grad-blue:    linear-gradient(135deg, var(--pink-700) 0%, var(--pink-600) 50%, var(--pink-500) 100%);
+  --grad-navy:    var(--grad-brand);
+
+  --error:    #B42318;
+  --success:  #12805C;
+  --whatsapp: #25D366;
+
+  /* ── Structural / sizing ── */
+  --radius-card:    28px;
+  --radius-card-sm: 20px;
+  --radius-img:     0px;
+  --pill:           999px;
+  --ease:           cubic-bezier(0.22, 1, 0.36, 1);
+  --font:           var(--font-inter), 'Inter', system-ui, sans-serif;
+  --section-gap:    clamp(88px, 11vw, 160px);
+  --space-section:  clamp(88px, 11vw, 160px);
+  --gut:            clamp(20px, 5vw, 64px);
+}
+
+/* ── Surface context overrides ──────────────────────────────────────────── */
+[data-surface="white"] {
+  --section-bg: var(--white);
+  --card:       var(--pink-50);
+  --card-hover: var(--pink-100);
+  --tag-bg:     var(--white);
+}
+[data-surface="grey"],
+[data-surface="pink"] {
+  --section-bg: var(--pink-50);
+  --card:       var(--white);
+  --card-hover: var(--pink-100);
+  --tag-bg:     var(--pink-50);
+}
+[data-surface="blue"] {
+  --section-bg: var(--pink-50);
+  --card:       var(--white);
+  --card-hover: var(--pink-100);
+  --tag-bg:     var(--pink-50);
+}
+[data-surface="dark"] {
+  --section-bg:    var(--pink-900);
+  --card:          var(--pink-800);
+  --card-hover:    var(--pink-700);
+  --tag-bg:        var(--pink-800);
+  --text:          #FFFFFF;
+  --text-muted:    rgba(255,255,255,.68);
+  --line:          rgba(255,255,255,.18);
+  --pill-border:   rgba(255,255,255,.25);
+  --on-dark:       #FFFFFF;
+  --on-dark-muted: rgba(255,255,255,.68);
+  color:           #FFFFFF;
+}
