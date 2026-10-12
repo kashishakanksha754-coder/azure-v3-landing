@@ -287,5 +287,5 @@ export const CLIENT_LOGOS = [
 
 export const SHOW_PARTNERS = false;
 
-export const TESTIMONIALS_LIVE = false;
+export const TESTIMONIALS_LIVE = true;
 export const STORIES_LIVE = false;
